@@ -1,0 +1,193 @@
+﻿.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scrolled {
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg-main) 80%, transparent);
+  border-bottom: 1px solid var(--stroke-soft);
+  box-shadow: 0 10px 25px rgba(2, 8, 23, 0.08);
+}
+
+.navInner {
+  position: relative;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logoBlock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(120deg, var(--accent-primary), var(--accent-secondary));
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.navButton {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.52rem 0.85rem;
+  border-radius: 999px;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.navButton:hover {
+  color: var(--text-primary);
+  background: var(--surface-soft);
+}
+
+.active {
+  color: var(--accent-primary);
+  background: var(--surface-soft);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.bookNowButton {
+  white-space: nowrap;
+}
+
+.mobileToggle {
+  display: none;
+  border: 1px solid var(--stroke-medium);
+  background: var(--surface-soft);
+  color: var(--text-primary);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.65rem;
+  cursor: pointer;
+}
+
+.mobileToggle svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@media (max-width: 1280px) and (min-width: 1121px) {
+  .navList {
+    gap: 0.28rem;
+  }
+
+  .navButton {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .mobileToggle {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    right: 0;
+    display: grid;
+    align-items: stretch;
+    gap: 0.75rem;
+    background: var(--surface-primary);
+    border: 1px solid var(--stroke-soft);
+    border-radius: 1rem;
+    box-shadow: var(--elevation-2);
+    padding: 0.9rem;
+    max-height: min(72vh, 540px);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.24s ease, transform 0.24s ease, visibility 0.24s ease;
+  }
+
+  .open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navList {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.3rem;
+  }
+
+  .navButton {
+    width: 100%;
+    text-align: left;
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .bookNowButton {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .logoText {
+    display: none;
+  }
+
+  .navInner {
+    min-height: 4.5rem;
+  }
+}

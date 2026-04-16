@@ -1,0 +1,79 @@
+﻿.sliderWrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid var(--stroke-soft);
+  background: var(--surface-primary);
+  border-radius: 1.1rem;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  box-shadow: var(--elevation-1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--stroke-soft);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.event {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.review {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  min-height: 5.5rem;
+}
+
+.dots {
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--stroke-medium);
+  cursor: pointer;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.dotActive {
+  width: 1.45rem;
+  background: var(--accent-primary);
+}

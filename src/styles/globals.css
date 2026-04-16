@@ -1,0 +1,128 @@
+﻿:root {
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Sora', 'Trebuchet MS', sans-serif;
+
+  --bg-main: #f7f4ef;
+  --bg-accent-soft: rgba(244, 114, 29, 0.18);
+  --bg-accent-soft-2: rgba(14, 116, 144, 0.18);
+
+  --surface-primary: #fffdfb;
+  --surface-soft: #f7efe4;
+  --surface-strong: #f3e2cb;
+
+  --stroke-soft: rgba(148, 105, 53, 0.24);
+  --stroke-medium: rgba(148, 105, 53, 0.45);
+
+  --text-primary: #23180f;
+  --text-secondary: #5f4936;
+  --text-muted: #7d654f;
+
+  --accent-primary: #ea580c;
+  --accent-secondary: #be123c;
+
+  --elevation-1: 0 10px 25px rgba(117, 70, 18, 0.09);
+  --elevation-2: 0 18px 40px rgba(28, 17, 7, 0.14);
+  --elevation-3: 0 28px 65px rgba(17, 10, 4, 0.26);
+}
+
+[data-theme='dark'] {
+  --bg-main: #0b111f;
+  --bg-accent-soft: rgba(236, 112, 43, 0.16);
+  --bg-accent-soft-2: rgba(14, 165, 233, 0.12);
+
+  --surface-primary: #111a2d;
+  --surface-soft: #19253d;
+  --surface-strong: #22304a;
+
+  --stroke-soft: rgba(119, 144, 186, 0.28);
+  --stroke-medium: rgba(119, 144, 186, 0.52);
+
+  --text-primary: #edf5ff;
+  --text-secondary: #c5d6ee;
+  --text-muted: #93a9cb;
+
+  --accent-primary: #fb923c;
+  --accent-secondary: #ec4899;
+
+  --elevation-1: 0 12px 25px rgba(2, 6, 23, 0.3);
+  --elevation-2: 0 20px 42px rgba(2, 6, 23, 0.42);
+  --elevation-3: 0 30px 72px rgba(2, 6, 23, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-main);
+  line-height: 1.6;
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+#root {
+  min-height: 100vh;
+  animation: appEnter 0.55s ease both;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  padding: clamp(3.2rem, 8vw, 5.5rem) 0;
+  scroll-margin-top: 94px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes appEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

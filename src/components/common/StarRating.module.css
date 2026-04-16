@@ -1,0 +1,10 @@
+.stars {
+  color: #f59e0b;
+  display: inline-flex;
+  gap: 0.2rem;
+}
+
+.starIcon {
+  width: 0.95rem;
+  height: 0.95rem;
+}

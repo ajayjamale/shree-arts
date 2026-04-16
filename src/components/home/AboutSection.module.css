@@ -1,0 +1,63 @@
+﻿.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(1.4rem, 4vw, 2.6rem);
+  align-items: center;
+}
+
+.media {
+  border: 1px solid var(--stroke-soft);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: var(--elevation-1);
+}
+
+.media img {
+  width: 100%;
+  height: clamp(300px, 46vw, 460px);
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.content h3 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.content p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.achievements {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.achievements li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  color: var(--text-secondary);
+}
+
+.dot {
+  margin-top: 0.5rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: linear-gradient(120deg, var(--accent-primary), var(--accent-secondary));
+}
+
+@media (max-width: 980px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}

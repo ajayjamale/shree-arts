@@ -1,0 +1,22 @@
+﻿.toggle {
+  border: 1px solid var(--stroke-medium);
+  background: var(--surface-soft);
+  color: var(--text-primary);
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+}
+
+.toggle:hover {
+  transform: rotate(12deg);
+  border-color: var(--accent-primary);
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}

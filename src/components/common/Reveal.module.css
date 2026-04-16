@@ -1,0 +1,29 @@
+﻿.reveal {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.left {
+  transform: translate3d(-34px, 0, 0);
+}
+
+.right {
+  transform: translate3d(34px, 0, 0);
+}
+
+.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .left,
+  .right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

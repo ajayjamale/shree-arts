@@ -1,0 +1,79 @@
+.profile {
+  display: grid;
+  grid-template-columns: clamp(320px, 42vw, 520px) minmax(0, 1fr);
+  min-height: 520px;
+  gap: 1rem;
+  border: 1px solid var(--stroke-soft);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 10%, color-mix(in srgb, var(--accent-primary) 20%, transparent), transparent 55%),
+    var(--surface-primary);
+  box-shadow: var(--elevation-1);
+}
+
+.imageWrap {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  padding: 1.1rem 1.2rem;
+  display: grid;
+  align-content: center;
+  gap: 0.56rem;
+}
+
+.role {
+  color: var(--accent-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: clamp(1.4rem, 2.6vw, 2.05rem);
+  line-height: 1.2;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.bio {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.96rem;
+  max-width: 62ch;
+}
+
+.actions {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@media (max-width: 860px) {
+  .profile {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .imageWrap {
+    min-height: 320px;
+  }
+
+  .details {
+    padding: 1rem;
+  }
+}

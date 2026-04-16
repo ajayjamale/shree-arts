@@ -1,0 +1,32 @@
+﻿.socialList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+}
+
+.iconLink {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--stroke-medium);
+  background: var(--surface-soft);
+  transition: transform 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+
+.iconLink:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
