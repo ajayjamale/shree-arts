@@ -80,17 +80,23 @@ const Navbar = ({ theme, onToggleTheme }) => {
           <span className={styles.logoText}>{siteData.brandShort}</span>
         </a>
 
-        <button
-          type='button'
-          className={styles.mobileToggle}
-          onClick={() => setIsMenuOpen((value) => !value)}
-          aria-label='Toggle navigation menu'
-          aria-expanded={isMenuOpen}
-        >
-          <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
-            {isMenuOpen ? <path d='M6 6l12 12M18 6L6 18' /> : <path d='M4 7h16M4 12h16M4 17h16' />}
-          </svg>
-        </button>
+        <div className={styles.mobileControls}>
+          <div className={styles.mobileThemeToggle}>
+            <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+          </div>
+
+          <button
+            type='button'
+            className={styles.mobileToggle}
+            onClick={() => setIsMenuOpen((value) => !value)}
+            aria-label='Toggle navigation menu'
+            aria-expanded={isMenuOpen}
+          >
+            <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
+              {isMenuOpen ? <path d='M6 6l12 12M18 6L6 18' /> : <path d='M4 7h16M4 12h16M4 17h16' />}
+            </svg>
+          </button>
+        </div>
 
         <nav className={`${styles.navMenu} ${isMenuOpen ? styles.open : ''}`.trim()}>
           <ul className={styles.navList}>
@@ -108,7 +114,9 @@ const Navbar = ({ theme, onToggleTheme }) => {
           </ul>
 
           <div className={styles.actions}>
-            <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+            <div className={styles.desktopThemeToggle}>
+              <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+            </div>
             <Button className={styles.bookNowButton} variant='secondary' onClick={() => handleNavigate('contact')}>
               Book Now
             </Button>

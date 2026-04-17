@@ -91,8 +91,22 @@
   gap: 0.8rem;
 }
 
+.desktopThemeToggle {
+  display: inline-grid;
+}
+
 .bookNowButton {
   white-space: nowrap;
+}
+
+.mobileControls {
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.mobileThemeToggle {
+  display: none;
 }
 
 .mobileToggle {
@@ -123,6 +137,14 @@
 }
 
 @media (max-width: 1120px) {
+  .mobileControls {
+    display: inline-flex;
+  }
+
+  .mobileThemeToggle {
+    display: inline-grid;
+  }
+
   .mobileToggle {
     display: inline-grid;
     place-items: center;
@@ -172,8 +194,12 @@
 
   .actions {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 0;
+  }
+
+  .desktopThemeToggle {
+    display: none;
   }
 
   .bookNowButton {
