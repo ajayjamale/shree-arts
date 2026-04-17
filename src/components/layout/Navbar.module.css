@@ -209,8 +209,26 @@
 }
 
 @media (max-width: 440px) {
+  .logoBlock {
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .logoMark {
+    width: 2.15rem;
+    height: 2.15rem;
+    font-size: 0.83rem;
+  }
+
   .logoText {
-    display: none;
+    display: inline;
+    font-size: 0.88rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .mobileControls {
+    gap: 0.4rem;
   }
 
   .navInner {
